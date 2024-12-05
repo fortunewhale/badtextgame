@@ -1,7 +1,7 @@
 import random
 
 DIRECTIONS = ("left", "right")
-EVENTS = ["dead end", "monster", "trap"]
+EVENTS = ["dead end", "monster", "trap", ]
 CORRECT_ROUTE = ["left", "right", "left"]
 
 current_path = []
@@ -20,5 +20,8 @@ while not escaped:
         current_path.append(direction)
     else:
         print("Oh no! You've reached a " + random.choice(EVENTS))
-        print("...you run in a panic, but now you're right back where you first started; run the program to try again!")
+	if random.choice(EVENTS) == "monster":
+		print("you died")
+`		break
+	print("...you run in a panic, but now you're right back where you first started; run the program to try again!")
         break
