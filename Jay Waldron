@@ -22,6 +22,6 @@ while not escaped:
         print("Oh no! You've reached a " + random.choice(EVENTS))
 	if random.choice(EVENTS) == "monster":
 		print("you died")
-`		break
+		break
 	print("...you run in a panic, but now you're right back where you first started; run the program to try again!")
         break
